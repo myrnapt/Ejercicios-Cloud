@@ -1,0 +1,93 @@
+"editor.tokenColorCustomizations": {
+    {
+  // Activo el resaltado semántico para que funcionen los semanticTokenColors
+  "editor.semanticHighlighting.enabled": true,
+
+  "editor.tokenColorCustomizations": {
+    "semanticTokenColors": {
+      // Atributos / propiedades (HTML, XML, JSX, objetos, etc.)
+      "property":    "#8A6D3B",      // marrón
+      "property.declaration": "#7A5F33",
+      "member":      "#8A6D3B",
+
+      // Atributos de etiquetas (HTML/XML) y JSX props
+      "attribute":   "#B85450",      // rojo terroso para diferenciarlos
+      "attribute.declaration": "#A34743",
+
+      // Variables y parámetros
+      "variable":    "#2B6CB0",      // azul medio
+      "parameter":   "#1E5A96",
+
+      // Constantes y enums
+      "enumMember":  "#B7791F",      // ámbar
+      "readonly":    "#B7791F",
+      "macro":       "#B7791F",
+
+      // Funciones y métodos
+      "function":    "#2C7A7B",      // teal
+      "method":      "#2C7A7B",
+
+      // Clases, tipos, interfaces
+      "class":       "#805AD5",      // púrpura
+      "type":        "#805AD5",
+      "interface":   "#6B46C1",
+      "struct":      "#6B46C1",
+
+      // Palabras clave y modificadores
+      "keyword":     "#1A202C",      // casi negro para mucha legibilidad
+      "modifier":    "#1A202C",
+      "operator":    "#4A5568",      // gris oscuro
+
+      // Literales
+      "string":      "#2F855A",      // verde
+      "number":      "#D97706",      // naranja
+      "boolean":     "#C05621",
+
+      // Decoradores / anotaciones
+      "decorator":   "#C53030",      // rojo
+
+      // Comentarios
+      "comment":     "#718096",      // gris
+      "documentation": "#5A677A"
+    },
+
+    "textMateRules": [
+      // HTML/XML/JSX: nombre de atributo
+      { "scope": ["entity.other.attribute-name", "meta.tag.attribute-name"], "settings": { "foreground": "#B85450" } },
+      // Valor de atributo (strings)
+      { "scope": ["string.quoted.double", "string.quoted.single", "string.template"], "settings": { "foreground": "#2F855A" } },
+
+      // Propiedades (JS/TS/JSON)
+      { "scope": ["meta.object-literal.key", "support.type.property-name", "variable.other.property"], "settings": { "foreground": "#8A6D3B" } },
+
+      // Variables y parámetros
+      { "scope": ["variable", "variable.other.readwrite"], "settings": { "foreground": "#2B6CB0" } },
+      { "scope": ["variable.parameter"], "settings": { "foreground": "#1E5A96" } },
+
+      // Funciones y métodos
+      { "scope": ["entity.name.function", "support.function", "meta.method"], "settings": { "foreground": "#2C7A7B" } },
+
+      // Clases / tipos / interfaces
+      { "scope": ["entity.name.type", "support.class", "support.type", "entity.name.class"], "settings": { "foreground": "#805AD5" } },
+
+      // Palabras clave y operadores
+      { "scope": ["keyword", "storage.type", "storage.modifier"], "settings": { "foreground": "#1A202C", "fontStyle": "bold" } },
+      { "scope": ["keyword.operator", "punctuation.separator", "punctuation.terminator"], "settings": { "foreground": "#4A5568" } },
+
+      // Números y booleanos
+      { "scope": ["constant.numeric"], "settings": { "foreground": "#D97706" } },
+      { "scope": ["constant.language.boolean"], "settings": { "foreground": "#C05621" } },
+
+      // Constantes y enum members
+      { "scope": ["constant.other", "variable.other.constant", "support.constant"], "settings": { "foreground": "#B7791F" } },
+
+      // Decoradores / anotaciones
+      { "scope": ["meta.decorator", "storage.type.annotation", "entity.name.function.decorator"], "settings": { "foreground": "#C53030" } },
+
+      // Comentarios
+      { "scope": ["comment", "comment.block.documentation"], "settings": { "foreground": "#718096", "fontStyle": "italic" } }
+    ]
+  }
+}
+
+}
