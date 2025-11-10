@@ -75,7 +75,6 @@ resource "aws_security_group" "grupo_seguridad" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-
   ingress {
     description = "ICMP des de VPC"
     from_port   = -1

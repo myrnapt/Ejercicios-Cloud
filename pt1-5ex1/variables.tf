@@ -10,12 +10,12 @@ variable "project_name" {
 
 variable "instance_count" {
   type        = number
-  default     = 8
+  default     = 3
 }
 
 variable "subnet_count" {
   type        = number
-  default     = 4
+  default     = 2
 }
 
 
@@ -32,7 +32,6 @@ variable "instance_ami" {
 variable "create_s3_bucket" {
   type        = bool
   default     = true
-  #(per crear bucket S3 condicionalment)
 }
 
 variable "vpc_cidr" {
