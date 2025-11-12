@@ -1,3 +1,4 @@
+#Declaramos varinbles que luego referenciaremos en los recursos
 variable "region" {
   type        = string
   default     = "us-east-1"

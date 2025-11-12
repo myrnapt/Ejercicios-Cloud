@@ -1,3 +1,4 @@
+#Especificamos el proveedor AWS y la version de terraform
 terraform {
   required_version = ">= 1.3.0" 
   required_providers {
@@ -8,6 +9,7 @@ terraform {
   }
 }
 
+#Especificamos la region donde se desplegaran los recursos
 provider "aws" {
   region = "us-east-1"
 }
