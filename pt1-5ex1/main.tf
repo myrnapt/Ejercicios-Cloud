@@ -23,7 +23,7 @@ resource "aws_subnet" "subnet_publicas" {
 resource "aws_subnet" "subnet_privadas" {
   count                   = var.subnet_count
   vpc_id                  = aws_vpc.vpc_01.id
-  cidr_block              = cidrsubnet(var.vpc_cidr, 4, count.index)
+  cidr_block              = cidrsubnet(var.vpc_cidr, 4, count.index + var.subnet_count)
   map_public_ip_on_launch = false #no tiene ip publica
   
   tags = {
