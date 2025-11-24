@@ -11,5 +11,5 @@ terraform {
 
 #Especificamos la region donde se desplegaran los recursos
 provider "aws" {
-  region = "us-east-1"
+  region = var.region
 }
