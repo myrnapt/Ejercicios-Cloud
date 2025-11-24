@@ -99,6 +99,7 @@ resource "aws_security_group" "grupo_seguridad" {
     } #permite salidas hacia cualquier IP
 }
 
+
 #Creamos las instancias EC2
 # Instancias públicas
 resource "aws_instance" "publicas" {

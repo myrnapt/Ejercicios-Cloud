@@ -11,7 +11,7 @@ variable "project_name" {
 
 variable "instance_count" {
   type        = number
-  default     = 3
+  default     = 2
 }
 
 variable "subnet_count" {
@@ -19,10 +19,9 @@ variable "subnet_count" {
   default     = 2
 }
 
-
 variable "instance_type" {
   type        = string
-  default     = "t3.micro"
+  default     = "t2.micro"
 }
 
 variable "instance_ami" {
