@@ -11,9 +11,9 @@ variable "project_name" {
 }
 
 #Variables para la VPC e instnacias
-variable "public_subnet_count" {
-  type        = number
-  default     = 1
+variable "public_subnet_cidr" {
+  type        = string
+  default     = "10.0.0.0/24"
 }
 
 variable "vpc_cidr" {
@@ -21,21 +21,11 @@ variable "vpc_cidr" {
   default     = "10.0.0.0/16"
 }
 
-variable "vpc_cidr_private" {
-  type        = string
-  default     =  cidrsubnet()
-}
-
-variable "private_instace_count" { #cada instancia privada tendra su propia subnet privada
+#Instancias
+variable "private_instance_count" { #cada instancia privada tendra su propia subnet privada
   type        = number
   default     = 1
 }
-
-variable "instance_count" {
-  type        = number
-  default     = 2
-}
-
 
 variable "instance_type" {
   type        = string
@@ -47,13 +37,19 @@ variable "instance_ami" {
   default     = "ami-052064a798f08f0d3" 
 }
 
+#bucket
 variable "create_s3_bucket" {
   type        = bool
   default     = true
 }
 
-
 variable "my_ip" {
     type        = string
     default     = "2.136.30.53/32"
+}
+
+variable "azs" {
+  description = "Availability Zones to use"
+  type        = list(string)
+  default     = ["us-east-1a", "us-east-1b", "us-east-1c", "us-east-1d", "us-east-1e", "us-east-1f"]
 }
